@@ -127,6 +127,23 @@ console.log(poll);
 poll.displayResults.call({answers:[1, 5, 3, 9, 6, 1] });
 */
 
+
+// Closures 
+
+let f;
+let g = function () {
+  let a = 23;
+  console.log(a)
+  f = function () {
+    console.log(a * 2);
+  }
+}
+
+g();
+f();
+console.dir(g);
+console.dir(f);
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -144,9 +161,9 @@ GOOD LUCK 😀
 (function () {
   const header = document.querySelector('h1');
   header.style.color = 'red';
-    document.querySelector('body').addEventListener('click', function(){
-      header.style.color = `#${Math.trunc(Math.random() * 900000)}`;
-    })
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = `#${Math.trunc(Math.random() * 900000)}`;
+  })
 
 })();
 
